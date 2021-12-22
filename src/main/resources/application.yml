@@ -1,0 +1,22 @@
+server:
+  port : 8080
+spring:
+  application:
+    name: spring-cloud-gateway
+
+keycloak:
+  realm : GatewayAUTH
+  auth-server-url : http://localhost:8180/auth
+  resource : SpringBootGateway
+  public-client : true
+  bearer-only : true
+eureka:
+  client:
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+    register-with-eureka : true
+
+
+
+
